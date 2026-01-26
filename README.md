@@ -4,6 +4,10 @@ A stunning 3D photo lottery/lucky draw application with rotating avatar sphere e
 
 一个炫酷的 3D 照片抽奖应用，支持头像球体旋转效果。适用于年会抽奖、公司活动、线下抽奖等场景。
 
+## 🚀 Live Demo | 在线演示
+
+**👉 [https://3d-photo-lottery.vercel.app](https://3d-photo-lottery.vercel.app)**
+
 ## Features | 功能特性
 
 - ✨ **3D Particle Effects** - Beautiful floating particle animation with participant avatars
@@ -19,7 +23,7 @@ A stunning 3D photo lottery/lucky draw application with rotating avatar sphere e
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/3d-photo-lottery.git
+git clone https://github.com/feiyang1020/3d-photo-lottery.git
 cd 3d-photo-lottery
 
 # Install dependencies
