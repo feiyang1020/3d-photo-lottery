@@ -1,0 +1,47 @@
+{
+  "lottery": {
+    "title": "年会抽奖",
+    "loading": "加载中",
+    "start": "开始抽奖",
+    "stop": "停止抽奖",
+    "continue": "继续抽奖",
+    "reset": "清空重置",
+    "winner": "中奖者",
+    "noWinner": "暂无中奖者",
+    "allDrawn": "所有人已抽完",
+    "selectPrize": "选择奖项",
+    "remaining": "剩余",
+    "people": "人",
+    "congratulations": "恭喜",
+    "fullscreen": "全屏",
+    "exitFullscreen": "退出全屏"
+  },
+  "prizes": {
+    "special": "特等奖",
+    "first": "一等奖",
+    "second": "二等奖",
+    "third": "三等奖",
+    "fourth": "四等奖",
+    "fifth": "五等奖",
+    "random1": "随机1人",
+    "random2": "随机2人",
+    "random3": "随机3人",
+    "random5": "随机5人",
+    "random10": "随机10人"
+  },
+  "settings": {
+    "title": "设置",
+    "language": "语言",
+    "dataSource": "数据源",
+    "api": "API接口",
+    "local": "本地数据",
+    "apiUrl": "API地址",
+    "save": "保存",
+    "cancel": "取消"
+  },
+  "common": {
+    "confirm": "确认",
+    "cancel": "取消",
+    "close": "关闭"
+  }
+}

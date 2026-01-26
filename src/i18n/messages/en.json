@@ -1,0 +1,47 @@
+{
+  "lottery": {
+    "title": "Lucky Draw",
+    "loading": "Loading",
+    "start": "Start Draw",
+    "stop": "Stop Draw",
+    "continue": "Continue",
+    "reset": "Reset All",
+    "winner": "Winner",
+    "noWinner": "No winners yet",
+    "allDrawn": "All participants drawn",
+    "selectPrize": "Select Prize",
+    "remaining": "Remaining",
+    "people": "people",
+    "congratulations": "Congratulations",
+    "fullscreen": "Fullscreen",
+    "exitFullscreen": "Exit Fullscreen"
+  },
+  "prizes": {
+    "special": "Grand Prize",
+    "first": "First Prize",
+    "second": "Second Prize",
+    "third": "Third Prize",
+    "fourth": "Fourth Prize",
+    "fifth": "Fifth Prize",
+    "random1": "Random 1",
+    "random2": "Random 2",
+    "random3": "Random 3",
+    "random5": "Random 5",
+    "random10": "Random 10"
+  },
+  "settings": {
+    "title": "Settings",
+    "language": "Language",
+    "dataSource": "Data Source",
+    "api": "API",
+    "local": "Local Data",
+    "apiUrl": "API URL",
+    "save": "Save",
+    "cancel": "Cancel"
+  },
+  "common": {
+    "confirm": "Confirm",
+    "cancel": "Cancel",
+    "close": "Close"
+  }
+}
