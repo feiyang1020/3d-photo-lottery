@@ -60,48 +60,23 @@ export default function ControlPanel({ onStart, onStop, onReset, onContinue }: C
     relative p-3 rounded-lg font-semibold text-base
     transition-all duration-300 ease-out
     backdrop-blur-md
-    border border-cyan-400/50
-    shadow-lg shadow-cyan-500/20
-    hover:shadow-xl hover:shadow-cyan-400/30
-    hover:border-cyan-400
+    border border-white/20
+    shadow-lg shadow-black/20
+    hover:shadow-xl hover:shadow-black/30
+    hover:border-white/40
     hover:-translate-y-0.5
     active:translate-y-0 active:shadow-md
     disabled:opacity-40 disabled:cursor-not-allowed 
     disabled:hover:translate-y-0 disabled:hover:shadow-lg
-    disabled:hover:border-cyan-400/50
+    disabled:hover:border-white/20
   `;
 
-  // 主按钮样式（开始抽奖）
-  const primaryButtonClass = `
+  // 统一按钮样式
+  const buttonClass = `
     ${baseButtonClass}
-    bg-gradient-to-r from-cyan-500/80 to-blue-600/80
-    text-white
-    hover:from-cyan-400/90 hover:to-blue-500/90
-  `;
-
-  // 停止按钮样式
-  const stopButtonClass = `
-    ${baseButtonClass}
-    bg-gradient-to-r from-orange-500/80 to-red-600/80
-    text-white
-    hover:from-orange-400/90 hover:to-red-500/90
-  `;
-
-  // 次要按钮样式
-  const secondaryButtonClass = `
-    ${baseButtonClass}
-    bg-slate-800/60
-    text-cyan-300
-    hover:bg-slate-700/70
-    hover:text-cyan-200
-  `;
-
-  // 全屏按钮样式
-  const fullscreenButtonClass = `
-    ${baseButtonClass}
-    bg-purple-600/60
-    text-purple-200
-    hover:bg-purple-500/70
+    bg-white/10
+    text-white/90
+    hover:bg-white/20
     hover:text-white
   `;
 
@@ -120,14 +95,14 @@ export default function ControlPanel({ onStart, onStop, onReset, onContinue }: C
             onChange={(e) => setSelectedPrize(e.target.value)}
             disabled={isRolling}
             className="appearance-none px-5 py-2.5 pr-10
-              bg-gradient-to-r from-amber-500/80 to-orange-600/80
+              bg-white/10
               text-white font-semibold text-base
-              rounded-lg border border-amber-400/50
+              rounded-lg border border-white/20
               outline-none cursor-pointer
-              shadow-lg shadow-amber-500/20
+              shadow-lg shadow-black/20
               transition-all duration-300
-              hover:shadow-xl hover:shadow-amber-400/30
-              hover:border-amber-400
+              hover:bg-white/20
+              hover:border-white/40
               disabled:opacity-40 disabled:cursor-not-allowed"
           >
             {defaultConfig.prizeLevels.map((prize) => (
@@ -151,7 +126,7 @@ export default function ControlPanel({ onStart, onStop, onReset, onContinue }: C
         <button
           onClick={onStart}
           disabled={!isIdle || remainingCount === 0}
-          className={primaryButtonClass}
+          className={buttonClass}
           title={t('start')}
         >
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -164,7 +139,7 @@ export default function ControlPanel({ onStart, onStop, onReset, onContinue }: C
         <button
           onClick={onStop}
           disabled={!isRolling}
-          className={`${stopButtonClass} ${isRolling ? 'animate-pulse' : ''}`}
+          className={`${buttonClass} ${isRolling ? 'animate-pulse' : ''}`}
           title={t('stop')}
         >
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -177,7 +152,7 @@ export default function ControlPanel({ onStart, onStop, onReset, onContinue }: C
         <button
           onClick={onContinue}
           disabled={!isStopped}
-          className={secondaryButtonClass}
+          className={buttonClass}
           title={t('continue')}
         >
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -189,7 +164,7 @@ export default function ControlPanel({ onStart, onStop, onReset, onContinue }: C
         <button
           onClick={onReset}
           disabled={isRolling}
-          className={secondaryButtonClass}
+          className={buttonClass}
           title={t('reset')}
         >
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -203,7 +178,7 @@ export default function ControlPanel({ onStart, onStop, onReset, onContinue }: C
         {/* Fullscreen button */}
         <button
           onClick={toggleFullscreen}
-          className={fullscreenButtonClass}
+          className={buttonClass}
           title={isFullscreen ? t('exitFullscreen') : t('fullscreen')}
         >
           {isFullscreen ? (
@@ -222,13 +197,11 @@ export default function ControlPanel({ onStart, onStop, onReset, onContinue }: C
 
         {/* Remaining count */}
         <div className="flex items-center gap-2 px-4 py-2 
-          bg-slate-800/40 rounded-lg border border-white/10">
-          <svg className="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          bg-white/5 rounded-lg border border-white/10">
+          <svg className="w-5 h-5 text-white/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
           </svg>
-          <span className="text-white/80 text-sm">{t('remaining')}:</span>
-          <span className="text-cyan-400 font-bold text-lg min-w-[2rem] text-center">{remainingCount}</span>
-          <span className="text-white/60 text-sm">{t('people')}</span>
+          <span className="text-white font-bold text-lg min-w-[2rem] text-center">{remainingCount}</span>
         </div>
       </div>
     </div>
