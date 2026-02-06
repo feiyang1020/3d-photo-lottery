@@ -8,6 +8,10 @@ A stunning 3D photo lottery/lucky draw application with rotating avatar sphere e
 
 **👉 [https://3d-photo-lottery.vercel.app](https://3d-photo-lottery.vercel.app)**
 
+### 📹 Demo | 演示
+
+![Demo](public/demo.gif)
+
 ## Features | 功能特性
 
 - ✨ **3D Particle Effects** - Beautiful floating particle animation with participant avatars
